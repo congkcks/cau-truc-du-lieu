@@ -1,0 +1,29 @@
+.model small
+.stack 100
+.data
+    tb1 db 10,13,'chuoi da nhap vao la:$'
+    str DB 100 dup('$') ;
+.code
+    main proc
+        mov ax, @data
+        mov ds,ax ;khoi tao thanh ghi ds 
+          
+        ;nhap chuoi ky tu
+        mov ah,10 ;
+        lea dx,str
+    ; tro den dia chi dau str    
+        int 21h
+        
+        mov  ah,9 ;in mot xau ky tu   
+         ;in ra 
+         lea dx,tb1
+         int 21h   
+        ;dua dx chi ve phan tu thu 2 cua mang la  
+        ; ky tu dau tien duoc nhap vao
+        lea dx,str+2 ;256,5,h,e,l,l,o      
+        int 21h  ;in na
+        
+        mov ah,4CH
+        int 21h    
+    main endp
+ end

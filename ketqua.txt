@@ -1,0 +1,10 @@
+Khach hang: Man Dan; SDT: 0123456789; Gia cuoc: 13200
+So cuoc goi: NH: 0; LC: 1; X: 0; RX: 0; 
+Khach hang: Che Xanh; SDT: 0383268699; Gia cuoc: 3080
+So cuoc goi: NH: 1; LC: 0; X: 0; RX: 0; 
+Khach hang: Lan Di; SDT: 0876543219; Gia cuoc: 4620
+So cuoc goi: NH: 0; LC: 0; X: 1; RX: 0; 
+Khach hang: Hoang Gia; SDT: 0987654321; Gia cuoc: 0
+So cuoc goi: NH: 0; LC: 0; X: 0; RX: 0; 
+Khach hang: Go Xua; SDT: 0999999999; Gia cuoc: 3080
+So cuoc goi: NH: 0; LC: 0; X: 0; RX: 1; 
