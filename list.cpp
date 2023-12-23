@@ -61,6 +61,46 @@ class List{
 		
 	
 };
+class vecto{
+	private:
+		int n;
+		vector<NhanVien> v;
+	public:
+		void them(){
+			NhanVien x;
+			cin>>x;
+			v.push_back(x);
+		}
+		void xoa(){
+			cout<<"nhap ma can xoa"<<endl;
+			string ma;
+			cin>>ma;
+			for(auto it=v.begin();it!=v.end();it++){
+				if(it->getma()==ma){
+					v.erase(it);
+				}
+			}
+		}
+		friend int timkiemnhiphan(int arr[],int left,int right,int x){
+	
+	    while(left<=right){
+		 int mid = left + (right - left) / 2;
+        if (arr[mid] == x)
+            return mid;
+        if (arr[mid] < x)
+            left = mid + 1;
+        else
+            right = mid - 1;
+	    }
+	// neu khong tim thay
+	return -1;
+}
+};
+//class Tree{
+//	private:
+//		
+//		
+//};
 int main(){
     List l;
     l.tao();

@@ -17,6 +17,44 @@ void sapxepchon(int a[],int n){
 		}
 	}
 }
+void sapxepnoibot(int a[],int n){
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n-i-1;j++){
+			if(a[j]>a[j+1]){
+				swap(&a[j],&a[j+1]);
+			}
+		}
+	}
+	
+}
+void sapxepchen(int a[],int n){
+	
+	for(int i=1;i<n;i++){
+		//lay ra phan tu o chi so i
+		int key=a[i];
+		int pos=i-1;
+		while(pos>=0&&key<a[pos]){
+			a[pos+1]=a[pos];
+			--pos;
+		}
+		a[pos+1]=key;
+	}
+	
+}
+int timkiemnhiphan(int arr[],int left,int right,int x){
+	
+	while(left<=right){
+		 int mid = (left+right)/2;
+        if (arr[mid] == x)
+            return mid;
+        if (arr[mid] < x)
+            left = mid;
+        else
+            right = mid;
+	}
+	// neu khong tim thay
+	return -1;
+}
 int phanhoach(int a[],int l,int r){
 	int i=l-1;
 	int pivot=a[r];
@@ -103,11 +141,9 @@ void megesort(int a[],int l,int r){
 }
 int main(){
 	
-	int a[10]={10,9,8,7,6,5,4,3,2,1};
-	megesort(a,0,9);
-	for(int x: a){
-		cout<<x<<" ";
-	}
+	int a[10]={1,2,3,4,5,6,7,8,9,10};
+	int x=timkiemnhiphan(a,0,9,9);
+	cout<<x<<endl;
 	
-	
+	return 0;
 }
