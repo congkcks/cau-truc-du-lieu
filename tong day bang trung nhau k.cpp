@@ -22,7 +22,7 @@ void Try(int i, int sum, int cur){
 			add(i);
 		}
 		else if(sum < s){
-			Try(i + 1, sum, j + 1);
+			Try(i + 1, sum, j);
 		}
 		sum -= a[j];
 	}
